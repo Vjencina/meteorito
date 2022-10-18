@@ -11,6 +11,9 @@
 radius = 38.0797
 
 [node name="Player" type="RigidBody2D"]
+z_index = 50
+z_as_relative = false
+collision_mask = 22
 physics_material_override = ExtResource( 2 )
 gravity_scale = 0.0
 can_sleep = false
@@ -42,6 +45,7 @@ cast_to = Vector2( 0, 100 )
 script = ExtResource( 5 )
 
 [node name="LaserSFX" type="AudioStreamPlayer2D" parent="LaserBean2D"]
+z_as_relative = false
 stream = ExtResource( 6 )
 
 [editable path="Canion"]
