@@ -1,8 +1,7 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Juego/Proyectiles/Proyectil.gd" type="Script" id=1]
+[ext_resource path="res://Juego/Proyectiles/Proyectil/Proyectil.gd" type="Script" id=1]
 [ext_resource path="res://Juego/Proyectiles/Laser/glowing_circle.png" type="Texture" id=2]
-
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0.582915, 1 )
@@ -79,7 +78,6 @@ antialiased = true
 [node name="CastingParticles2D" type="Particles2D" parent="."]
 modulate = Color( 1.5, 1.5, 1.5, 1 )
 show_behind_parent = true
-emitting = false
 lifetime = 0.3
 visibility_rect = Rect2( 0, -18.722, 29.6756, 38.4841 )
 local_coords = false
@@ -88,7 +86,6 @@ texture = ExtResource( 2 )
 
 [node name="BeamParticles2D" type="Particles2D" parent="."]
 modulate = Color( 1.5, 1.5, 1.5, 1 )
-emitting = false
 amount = 50
 preprocess = 1.0
 randomness = 1.0
@@ -101,7 +98,6 @@ texture = ExtResource( 2 )
 [node name="CollisionParticles2D" type="Particles2D" parent="."]
 modulate = Color( 1.5, 1.5, 1.5, 1 )
 show_behind_parent = true
-emitting = false
 amount = 16
 lifetime = 0.3
 visibility_rect = Rect2( -2500, -2500, 5000, 5000 )

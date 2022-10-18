@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Juego/Naves/Player/jugadorNave_azul.png" type="Texture" id=1]
 [ext_resource path="res://Juego/Naves/Player/MaterialFisicoOriginal.tres" type="PhysicsMaterial" id=2]
 [ext_resource path="res://Juego/Naves/Player/Player.gd" type="Script" id=3]
 [ext_resource path="res://Juego/Proyectiles/Canion.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Juego/Naves/Player/LaserBean2D.gd" type="Script" id=5]
-[ext_resource path="res://AssetsTemporales/sci-fi-sounds/Audio/laserLarge_000.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Juego/Proyectiles/Laser/LaserBeam2D.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 38.0797
@@ -34,14 +33,7 @@ position = Vector2( 0, -33 )
 [node name="PuntoDerecho" parent="Canion" index="1"]
 position = Vector2( 0, 33 )
 
-[node name="LaserBean2D" type="RayCast2D" parent="."]
-modulate = Color( 0.129412, 0.109804, 0.109804, 1 )
-rotation = -1.5708
-enabled = true
-cast_to = Vector2( 0, 100 )
-script = ExtResource( 5 )
-
-[node name="LaserSFX" type="AudioStreamPlayer2D" parent="LaserBean2D"]
-stream = ExtResource( 6 )
+[node name="LaserBeam2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 36.5, 0.5 )
 
 [editable path="Canion"]
