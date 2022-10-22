@@ -10,43 +10,18 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node2D",
-"class": "Canion",
-"language": "GDScript",
-"path": "res://Canion.gd"
-}, {
-"base": "Node2D",
 "class": "Nivel",
 "language": "GDScript",
 "path": "res://Juego/Niveles/Nivel.gd"
-}, {
-"base": "RigidBody2D",
-"class": "Player",
-"language": "GDScript",
-"path": "res://Juego/Naves/Player/Player.gd"
-}, {
-"base": "Area2D",
-"class": "Proyectil",
-"language": "GDScript",
-"path": "res://Juego/Proyectiles/Proyectil/Proyectil.gd"
-}, {
-"base": "RayCast2D",
-"class": "RayoLaser",
-"language": "GDScript",
-"path": "res://Juego/Naves/Player/LaserBean2D.gd"
 } ]
 _global_script_class_icons={
-"Canion": "",
-"Nivel": "",
-"Player": "",
-"Proyectil": "",
-"RayoLaser": ""
+"Nivel": ""
 }
 
 [application]
 
 config/name="Meteoritos"
 run/main_scene="res://Juego/Niveles/NivelTest.tscn"
-config/icon="res://Juego/nave1.png"
 
 [autoload]
 
